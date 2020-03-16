@@ -1,0 +1,18 @@
+//Runtime pois vai rodar em tempo de execução
+Runtime runtime = Runtime.getRuntime();
+//Então eu crio um processo e associo à um processo executado em tempo de execução, nesse caso o ENV (Environment)
+Process process = runtime.exec("env");
+
+//Aqui eu uso o Try para poder cuidar dos erros, e nesse caso eu vou pegar o InputStream() do processo
+try (InputStream in = process.getInputStream();) {
+    //Associo um Byte[] pare guardar as informações e um len para o tamanho
+    byte[] bytes = new byte[2048];
+    int len;
+    //Vou imprimir algumas informações do ambiente
+    while ((len = in.read(bytes)) != -1) {
+    System.out.write(bytes, 0, len);
+    }
+    //Aqui eu vou abrir o Google Chrome na página do Facebook.
+    Runtime.getRuntime().exec("google-chrome ['www.facebook.com']");
+}
+System.out.println("Process exited with: " + process.waitFor());
