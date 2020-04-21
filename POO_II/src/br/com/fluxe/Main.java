@@ -9,6 +9,10 @@ public class Main {
 		UI_Helper.showLogo();
 		UI_Helper.clearConsole();
 		UI_Helper.showLogo();
+		
+		while(true) {
+			System.out.println("TA FUNCIONANDO!!");
+		}
 	}
 
 }
