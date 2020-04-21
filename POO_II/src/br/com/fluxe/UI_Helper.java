@@ -1,8 +1,12 @@
 package br.com.fluxe;
 
+import java.util.concurrent.TimeUnit;
+
 public class UI_Helper {
 
-	public static void showLogo() {
+	public final static void showLogo() throws InterruptedException {
+		UI_Helper.clearConsole();
+		
 		System.out.println("  ______   _                       \n" + 
 				" |  ____| | |                      \n" + 
 				" | |__    | |  _   _  __  __   ___ \n" + 
@@ -11,6 +15,36 @@ public class UI_Helper {
 				" |_|      |_|  \\__,_| /_/\\_\\  \\___|\n" + 
 				"                                   \n" + 
 				"                                   ");
+			TimeUnit.SECONDS.sleep(4);
+	}
+	
+	public final static void showMenu() {
+		UI_Helper.clearConsole();
+		
+		System.out.println("  __  __                     \n" + 
+				" |  \\/  |  ___   _ _    _  _ \n" + 
+				" | |\\/| | / -_) | ' \\  | || |\n" + 
+				" |_|  |_| \\___| |_||_|  \\_,_|\n" + 
+				"                              \n");
+		
+		System.out.println("--------------------------------------------------------------------------------------\n" + 
+				"\n" + 
+				"Digite o número da sua escolha:\n" + 
+				"\n" + 
+				"( 1 ) - Cadastrar um usuário\n" + 
+				"\n" + 
+				"( 2 ) - Alterar dados de um usuário\n" + 
+				"\n" + 
+				"( 3 ) - Alterar minha senha\n" + 
+				"\n" + 
+				"( 4 ) - Cadastrar uma entrada no Fluxo de caixa\n" + 
+				"\n" + 
+				"( 5 ) - Cadastrar uma saída no Fluxo de caixa \n" + 
+				"\n" + 
+				"( 6 ) - Gerar Relatórios\n" + 
+				"\n" + 
+				"( 7 ) - Sair\n" + 
+				"");
 	}
 	
 	

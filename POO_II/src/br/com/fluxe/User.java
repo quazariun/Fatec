@@ -1,11 +1,28 @@
 package br.com.fluxe;
 
-public class User {
-	public String name;
-	public String celphone;
-	public String adress;
-	public String email;
-	public String login;
+import java.io.Serializable;
+
+public class User implements Serializable {
+	
+	private static final long serialVersionUID = -3833464408156555727L;
+	
+	private String username;
 	private String password;
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	
 }
