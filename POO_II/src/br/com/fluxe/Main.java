@@ -14,6 +14,7 @@ public class Main {
 			UI_Helper.showMenu();
 			option = Input_Handler.menu_input();
 			System.out.println(option);
+			
 			switch(option) {
 				case ADD_USER:
 					break;
