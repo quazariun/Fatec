@@ -3,6 +3,18 @@ package br.com.fluxe;
 import java.util.concurrent.TimeUnit;
 
 public class UI_Helper {
+	
+	public static void showUserInputRequest() {
+		UI_Helper.clearConsole();
+		
+		System.out.println("Digite seu login: \n");
+	}
+	
+	public static void showPasswordInputRequest() {
+		UI_Helper.clearConsole();
+		
+		System.out.println("Digite sua senha: \n");
+	}
 
 	public final static void showLogo() throws InterruptedException {
 		UI_Helper.clearConsole();
@@ -69,5 +81,10 @@ public class UI_Helper {
 	    {
 	    	System.out.println(e);
 	    }
+	}
+
+	public static void showMessage(String string) throws InterruptedException {
+		System.out.println(string);
+		TimeUnit.SECONDS.sleep(4);
 	}
 }

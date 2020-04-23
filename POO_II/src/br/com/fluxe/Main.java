@@ -17,16 +17,29 @@ public class Main {
 			
 			switch(option) {
 				case ADD_USER:
+					Authentication.getPermission();
+					
+					if(Input_Handler.addUserInput()) {
+						UI_Helper.showMessage("Usuário cadastrado com sucesso.");
+					} else {
+						UI_Helper.showMessage("Houve um problema durante o cadastramento do usuário.");
+					}
 					break;
+					
 				case ALTER_USER_DATA:
+					Authentication.getPermission();
 					break;
 				case ALTER_PASSWORD:
+					Authentication.getPermission();
 					break;
 				case ADD_ENTRY_FLUXE:
+					Authentication.getPermission();
 					break;
 				case ADD_EXIT_FLUXE:
+					Authentication.getPermission();
 					break;
 				case MAKE_FINANCIAL_REPORT:
+					Authentication.getPermission();
 					break;
 				case EXIT:
 					break;
